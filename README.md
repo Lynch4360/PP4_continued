@@ -1,69 +1,27 @@
 
 # Wired Out
 
-![Wired Out - Responsive]( 'Shows responsive views of site')
+![Wired Out - Responsive](AM I RESPONSIVE IMAGE HERE FROM INSIDE STATIC FOLDER)
 
-[View the live project here]('Link to deployed site - Wired out')
+[View the live project here](LINK TO DEPLOYED SITE HEROKU.APP)
 
-## Table of contents
+## Version Control
 
-- [Wired Out](#wired-out)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [UX](#ux)
-    - [User Stories](#user-stories)
-      - [Users:](#users)
-    - [Development Planes](#development-planes)
-    - [Strategy](#strategy)
-      - [Scope](#scope)
-      - [Structure](#structure)
-    - [Skeleton](#skeleton)
-      - [Colour Scheme](#colour-scheme)
-      - [Logo](#logo)
-      - [Typography](#typography)
-      - [Imagery](#imagery)
-  - [Features](#features)
-    - [Design Features](#design-features)
-    - [Existing Features](#existing-features)
-    - [Features to Implement in the future](#features-to-implement-in-the-future)
-  - [Issues and Bugs](#issues-and-bugs)
-  - [Technologies](#technologies)
-    - [Main Languages Used](#main-languages-used)
-    - [Additional Languages Used](#additional-languages-used)
-    - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
-  - [Testing](#testing)
-  - [Deployment](#deployment)
-    - [Deploying on Heroku](#deploying-on-heroku)
-    - [Forking the Repository](#forking-the-repository)
-    - [Creating a Clone](#creating-a-clone)
-  - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-    - [Code](#code)
-    - [Other](#other)
-  - [Acknowledgements](#acknowledgements)
-
----
+Github was used to track the progress of this project. Commits were a little all over the place because of the gap between first handing in the project and resubmitting was quite great, but I tried my best to segment differant pieces of work on the project to different commits.
 
 ## Introduction
 
 This is the fourth of five Portfolio Projects that I must complete during my Full Stack Software Development program with Code Institute.
 
-REST OF INTRODUCTION HERE
+This project was created entirely for educational purposes. This blog is about educational Coding articles and news, the name 'Wired Out' playing on a scene from [The Social Network](https://en.wikipedia.org/wiki/The_Social_Network)
 
 [Back to top ⇧](#Wired-Out)
 
-## UX
-
-### User Stories
-
-#### Users:
-
-1. USER STORIES
-
-### Development Planes
-
 To create a comprehensive and appealing website. I Researched other Blog based websites to discover what features and functionality would be required. This information created the above user stories and is developed further below.
+
+### User stories
+User stories were created and managed via github
+LIST OF ALL THE USER STORIES
 
 ### Strategy
 
@@ -72,8 +30,8 @@ Broken into three categories, the website will attempt to focus on the following
 - **Roles:**
   - User
   - Admin
-- **Demographic:**
 
+- **Demographic:**
   - People interested in Coding
   - People looking for a news article styled programming site
   - Beginner's and advanced coders alike
@@ -100,7 +58,7 @@ The website need to enable the **admin** to:
 
 With the user stories in mind, I created the below strategy table to determine the trade-off of importance and viability with the following results:
 
-![Strategy Table]('Strategy Table')
+
 
 #### Scope
 
@@ -121,73 +79,75 @@ A scope was defined to identify what needed to be done to align features with th
       - Be able to edit their profile settings
 
 #### Structure
-
-This information architecture was organized in such a way as to ensure the users can navigate through the site easily.
-![Site map structure]('Site Map)
-
-Entity Relationship Diagram for the database models.
-![ERD structure]('Entity Relationship DIagram')
+  - Home: the landing page of the site, containing the list of posts/articles that have been written by the authors on the site and approved by an admin.
+  - Post Detail: The page that contains the content of a post so that a user can read it fully. Each post is available to comment on, flag as liked to show approval or bookmark so that a user can save the post to read at a later time. These features are fully authenticated so are only available if a user is registered and is currently logged in.
+  
+  
+  - Entity Relationship Diagram for the database models.
+    [ERD structure](INSERT ERD DIAGRAM IMAGE HERE FROM STATIC/MEDIA)
 
 ### Skeleton
+#### Wireframes
 
-Wireframe mockups were created using [Balsamiq](https://balsamiq.com/ "Balsamiq Website").
+The final result is slightly different as during the development stage the way htings were displayed was not as user friendly as expected and I decided to be more minimalistic and focus on the scope of the Assesment Criteria.
 
-Home Page:
-![Home Page Wireframe]('Home Page - Wireframe')
-
-About Page:
-![About Page Wireframe]('About Page - Wireframe')
-
-Article Details Page:
-![Article Details Page Wireframe]('Article Details Page - Wireframe')
-
-Create/Edit Article Page:
-![Create/Edit Article Page Wireframe]('Create/Edit Article Page - Wireframe')
-
-Edit Profile Page:
-![Edit Profile Page Wireframe]('Edit Profile Page - Wireframe')
+* [Homepage - Large Screen](SAVED IMAGE OF THE HOMEPAGE WIREFRAME STORED IN STATIC/MEDIA)
+* [Homepage - Medium Screen](SAVED IMAGE OF THE HOMEPAGE WIREFRAME STORED IN STATIC/MEDIA)
+* [Homepage - Small Screen](SAVED IMAGE OF THE HOMEPAGE WIREFRAME STORED IN STATIC/ME
+* [Account Page - Large Screen](SAVED IMAGE OF THE ACCOUNT WIREFRAME STORED IN STATIC/MEDIA)
+* [Account Page - Medium Screen](SAVED IMAGE OF THE ACDCOUNT WIREFRAME STORED IN STATIC/MEDIA)
+* [Account Page - Small Screen](SAVED IMAGE OF THE ACCOUNT WIREFRAME STORED IN STATIC/MEDIA)
+* [Post details Page - Large Screen](SAVED IMAGE )
+* [Post details Page - Medium Screen](SAVED IMAGE )
+* [Post details Page - Small Screen](SAVED IMAGE )
 
 #### Colour Scheme
 
+The Color scheme is a variationn of the [Discord Desktop app](https://discord.com/), I used PowerToys, which I mainly use to partition my windows but they also have a color picker tool. I then saved these Hex codes and added them as CSS variables so that they could be easily interchanged if I decided to use a different theme. 
+
+This display screenshot was taken from HTML Colours. [Color Scheme Image](https://github.com/Lynch4360/PP4_continued/blob/main/static/media/color_scheme.png)
+
 #### Logo
 
-#### Typography
+The Logo was created by using [Canva](https://www.canva.com/), I was going to make a Logo Icon for smaller screen sizes but decided against it, beleiving that a more uniform look was more professional.
 
-#### Imagery
-
-All of the article images are from [Pixabay](https://pixabay.com/ "Pixabay website").
-The header image is from [Unsplash](https://unsplash.com/ "Unsplash website")
+[Logo Image](https://github.com/Lynch4360/PP4_continued/blob/main/static/media/logo.png)
 
 [Back to top ⇧](#Wired-Out)
+
 
 ## Features
 
-### Design Features
-
-Each page of the website features a consistent navigational system:
-
-- The **Header** contains a conventionally placed logo in the top left of the page (whereby clicking this will redirect users back to the home page) and a navigation bar also starting on the left after the logo. On smaller screens, the navigation bar condenses into a dropdown with navigation options.
-
-- The **Header Image** on the home page,
-
-- The **Footer** is intentionally
-
-### Existing Features
-
-- **Example Feature** - This is an example explanation of what the feature is
+Navigation bar
+Home Page Post List
+Post details page
+About Page
+Register, Log in, Log out pages
+Commenting on post
+Liking a post
+Adding a post to favouites
 
 ### Features to Implement in the future
 
-- **Favorites Page**
-  - **Feature** - This feature would have been used to display all of the articles that a User has liked, so that they could find them more easily.
-  - **Reason for not featuring in this release** - The reason for not releasing this feature was that I ran out of time to implement the feature before the project's due date. This will be developed further in the future after grading is complete.
+- **404 Page**
+  - A modified 404 page to suit the style of the website.
+  - 
+- **500 Page**
+  - A modified 500 page to suit the style of the website.
+
 - **Sharing Images in Comments**
-  - **Feature** - This feature would have allowed users to upload images in the comment section to make the commenting infrastructure more robust.
-  - **Reason for not featuring in this release** - Again, I ran out of time to implement this feature before the project's due date. This will also be developed further in the future after grading is complete.
+  - This feature would have allowed users to upload images in the comment section to make the commenting infrastructure more robust.
+
 - **Saving Drafts to a Profile Page**
-  - **Feature** - This feature would have allowed users to create a draft of an article which would be saved on a profile page and would allow them to complete the draft at a later date and release the article on to the site.
+  - This feature would have allowed users to create a draft of an article which would be saved on a profile page and would allow them to complete the draft at a later date and release the article on to the site.
+- **Merchandise Store**
+  - I would link to add an online e-commerce  element to the current app to sell merchandise like Cups and hats branded like the blog.
 
 [Back to top ⇧](#Wired-Out)
+
+## Data Models
+* ### PostList
+* ### Comment
 
 ## Issues and Bugs
 
@@ -195,17 +155,7 @@ Each page of the website features a consistent navigational system:
 
 - **_Solution_**:
 
-**Bug** -
 
-- **_Solution_**:
-
-**Bug** -
-
-- **_Solution_**:
-
-**Issue**
-
-**Issue**
 
 [Back to top ⇧](#Wired-Out)
 
@@ -213,6 +163,8 @@ Each page of the website features a consistent navigational system:
 
 ### Main Languages Used
 
+- [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)> "Link to Python Wiki")
+  - Used to implement Django functionality, including building models, forms and views for the app.
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
 
@@ -220,8 +172,6 @@ Each page of the website features a consistent navigational system:
 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
   - Used to implement the Summernote feature that allowed the user to add styling to the recipe in the form.
-- [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)> "Link to Python Wiki")
-  - Used to implement Django functionality, including building models, forms and views for the app.
 
 ### Frameworks, Libraries & Programs Used
 
@@ -335,22 +285,21 @@ git clone https://github.com/USERNAME/REPOSITORY
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository "Link to GitHub troubleshooting")
 
 [Back to top ⇧](#Wired-Out)
-
 ## Credits
 
-Boutique ado, Dennis Ivy, Tutors, ETC ETC ETC
+### Media Credits
+- Blog posts images were found on [The Conversation](https://theconversation.com/)
+- Logo was created by using [Canva](https://www.canva.com/)
+- Icons were gotten from [Flaticon](https://www.flaticon.com/)
+- Coulor Pallette was created using [HTML Colours](https://htmlcolors.com/create-palette)
 
-### Content
-
-Most article's were acquired from ETC ETC ETC
-
-### Media
-
-- The images have been sourced from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com).
-
-### Code
-
-References used:
+### Content Credits
+- Most of my content for the blog posts and information found on the site were found on [The Conversation](https://theconversation.com/europe/topics/coding-5877)
+  
+### Code Credits
+- Overall concept was developed by using Code Institute tutorials and other tutorials by [Very Academy](https://www.youtube.com/c/veryacademy)
+  
+  #### References used:
 
 - [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
 - [Bootstrap](https://getbootstrap.com/ "Link to BootStrap page")
@@ -358,17 +307,12 @@ References used:
 - [Django Docs](https://docs.djangoproject.com/en/3.2/ "Link to Django's Docs for Version 3.2")
 - [Summernote GitHub Docs](https://github.com/summernote/summernote, "Link to Summernote's GitHub page")
 - [Cripsy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to Crispy Forms documentation")
-
-### Other
-
-- [Visio](https://www.microsoft.com/en-gb/microsoft-365/visio/flowchart-software "Link to Visio on Microsoft's website")
-  - Visio was used for the diagrams in this Readme document
-
-[Back to top ⇧](#Wired-Out)
-
+  
+### Other Credits
+- The Diagram's in this Project were created using [diagrams.net](https://app.diagrams.net/)
 ## Acknowledgements
 
-- I would like to thank ETC ETC ETC
+- I had lots of help from Malia my mentor making sure there were no glaring issues with my code and that my documentation was up to scratch.
 
 [Back to top ⇧](#Wired-Out)
 
