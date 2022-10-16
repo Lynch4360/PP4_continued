@@ -9,7 +9,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
             {% for post in post_list %}
-                <div class="col-md-4">
+                <div class="col-md-4 light-bg">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -19,7 +19,7 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }} ">
                                 {% endif %}
-                                <div class="image-flash">
+                                <div class="image-flash dark-bg">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
@@ -29,8 +29,8 @@
                             <p class="card-text">{{ post.excerpt }}</p>
                         </a>
                         <hr />
-                        <p class="card-text text-muted h6">{{ post.created_on }} <i
-                                class="far fa-heart"></i>{{ post.number_of_likes }}</p>
+                        <p class="card-text h6 card-link">{{ post.created_on }} <i
+                                class="far fa-heart like-link">    {{ post.number_of_likes }}</i></p>
                     </div>
                 </div>
             {% if forloop.counter|divisibleby:3 %}

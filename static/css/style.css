@@ -1,16 +1,15 @@
+:root {
+    --blue: #5662F6;
+    --off-black: #202225;
+    --dark-grey: #3C3F44;
+    --white: #ffffff;
+    --light-grey: #6c6bbd;
+  }
+
 body {
-    background-color: #F9FAFC;
-}
-
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.favicon {
-    background-color: white;
+    background-color: var(--off-black);
+    font-weight: 600;
+    font-size: larger;
 }
 
 .red-o {
@@ -22,20 +21,44 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: var(--light-grey);
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: var(--off-black);
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: var(--blue);
 }
 
 .card {
     border: none;
     background-color: transparent;
+}
+
+.card-text {
+    font-size: 22px;
+}
+
+.card-text-light {
+    color: var(--white);
+}
+
+.card-link {
+    color: var(--off-black);
+}
+
+.card-body {
+    background: var(--white);
+}
+
+.like-link {
+    float: right;
+    padding-right: 20px;
+    color: red;
+    height: 60px;
+    width: 60px;
 }
 
 .image-container {
@@ -47,7 +70,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: var(--off-black);
 }
 
 .author {
@@ -83,7 +106,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: var(--dark-grey);
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -92,12 +115,12 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: var(--white);
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: var(--off-black);
 }
 
 .post-title {
@@ -111,36 +134,36 @@ body {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: var(--white);
+    color: var(--blue);
 }
 
 .link {
-    color: #23BBBB;
+    color: var(--blue);
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: var(--dark-grey);
     text-decoration: underline;
 }
 
 .btn-like {
-    color: #E84610;
+    color: var(--blue);
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: var(--blue);
     background: transparent;
     border: none;
 }
