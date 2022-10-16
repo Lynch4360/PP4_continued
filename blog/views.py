@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
@@ -81,3 +82,13 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+@login_required
+def bookmark_add(request, id):
+    post = get_object_or_404(Post, id=id)
+    if post.bookmarks.filter(id=request.user.id).exists():
+        post.bookmarks.remove(request.user)
+    else:
+        post.bookmarks.add(request.user)
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
