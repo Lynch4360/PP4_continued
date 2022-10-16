@@ -6,10 +6,14 @@
     --light-grey: #6c6bbd;
   }
 
+p {
+    color: var(--white);
+}
+
 body {
     background-color: var(--off-black);
-    font-weight: 600;
-    font-size: larger;
+    font-weight: 400;
+    font-size: large;
 }
 
 .red-o {
@@ -38,7 +42,7 @@ body {
 }
 
 .card-text {
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .card-text-light {
@@ -59,6 +63,22 @@ body {
     color: red;
     height: 60px;
     width: 60px;
+}
+
+label {
+    color: var(--white);
+}
+
+.card-title {
+    overflow: hidden;
+    height: 10vh;
+}
+
+.card-img-fit {
+    width: 100;
+    height: 20vh;
+    padding: 0px;
+    object-fit: cover;
 }
 
 .image-container {
