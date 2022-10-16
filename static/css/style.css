@@ -9,6 +9,10 @@ body {
     color: #4A4A4F;
 }
 
+.favicon {
+    background-color: white;
+}
+
 .red-o {
     color: #E84610;
 }
