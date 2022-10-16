@@ -21,8 +21,13 @@ class PostDetail(View):
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
+        bookmarked = False
+
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
+
+        if post.bookmark.filter(id=self.request.user.id).exists():
+            bookmarked = True
 
         return render(
             request,
@@ -32,6 +37,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
+                "bookmarked": bookmarked,
                 "comment_form": CommentForm(),
             },
         )
@@ -41,6 +47,7 @@ class PostDetail(View):
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_on')
         liked = False
+
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
@@ -87,8 +94,18 @@ class PostLike(View):
 @login_required
 def bookmark_add(request, id):
     post = get_object_or_404(Post, id=id)
-    if post.bookmarks.filter(id=request.user.id).exists():
-        post.bookmarks.remove(request.user)
+    if post.bookmark.filter(id=request.user.id).exists():
+        post.bookmark.remove(request.user)
     else:
-        post.bookmarks.add(request.user)
+        post.bookmark.add(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+@login_required
+def bookmark_list(request):
+    user = request.user
+    bookmark_posts = user.bookmark.all()
+    context = {
+        'bookmark_posts': bookmark_posts,
+    }
+    return render(request, 'bookmarks.html', context)

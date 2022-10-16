@@ -26,7 +26,11 @@
 <div class="container">
     <div class="row">
         <div>
-            <a href="#" class="btn btn-outline-primary">Add to Bookmarks</i></a>
+            {% if bookmarked %}
+            <a href="{% url 'bookmark_add' id=post.id %}" class="btn btn-outline-primary">Bookmarked</i></a>
+            {% else %}
+            <a href="{% url 'bookmark_add' id=post.id %}" class="btn btn-outline-primary">Add to Bookmarks</i></a>
+            {% endif %}
         </div>
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body card-text-light">
