@@ -7,7 +7,7 @@
 ### Validator Testing 
 #### W3C CSS Validation 
 Passed through the CSS validator with no errors.
-![CSS Validator](IMAGE OF CSS VALIDATOR INSIDE MEDIA/STATIC
+![CSS Validator](IMAGE OF CSS VALIDATOR INSIDE MEDIA/STATIC)
 
 #### HTML Validator 
 All pages passed through HTML Validator with no errors.

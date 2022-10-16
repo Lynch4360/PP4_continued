@@ -289,6 +289,7 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 ### Media Credits
 - Blog posts images were found on [The Conversation](https://theconversation.com/)
+- Default placeholder image for a blog post was taken from Code Institute's "I think therefore I blog" tutorial series
 - Logo was created by using [Canva](https://www.canva.com/)
 - Icons were gotten from [Flaticon](https://www.flaticon.com/)
 - Coulor Pallette was created using [HTML Colours](https://htmlcolors.com/create-palette)
