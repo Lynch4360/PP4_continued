@@ -12,8 +12,8 @@ p {
 
 body {
     background-color: var(--off-black);
-    font-weight: 400;
     font-size: large;
+    font-weight: 400;
 }
 
 .red-o {
@@ -75,7 +75,7 @@ label {
 }
 
 .card-img-fit {
-    width: 100;
+    width: 100%;
     height: 20vh;
     padding: 0px;
     object-fit: cover;

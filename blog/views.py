@@ -1,13 +1,16 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Post
-from .forms import CommentForm
+from models import Post
+from forms import CommentForm
 
 
 class PostList(generic.ListView):
+
     model = Post
     queryset = Post.objects.filter(status=1).order_by('created_on')
     template_name = 'index.html'
@@ -16,36 +19,46 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(
+        self,
+        request,
+        slug,
+        *args,
+        **kwargs
+    ):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by('created_on')
+        comments = \
+            post.comments.filter(approved=True).order_by('created_on')
         liked = False
         bookmarked = False
 
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        if post.bookmark.filter(id=self.request.user.id).exists():
+        if post.bookmarks.filter(id=self.request.user.id).exists():
             bookmarked = True
 
-        return render(
-            request,
-            "post_detail.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": False,
-                "liked": liked,
-                "bookmarked": bookmarked,
-                "comment_form": CommentForm(),
-            },
-        )
+        return render(request, 'post_detail.html', {
+            'post': post,
+            'comments': comments,
+            'commented': False,
+            'liked': liked,
+            'bookmarked': bookmarked,
+            'comment_form': CommentForm(),
+        })
 
-    def post(self, request, slug, *args, **kwargs):
+    def post(
+        self,
+        request,
+        slug,
+        *args,
+        **kwargs
+    ):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by('created_on')
+        comments = \
+            post.comments.filter(approved=True).order_by('created_on')
         liked = False
 
         if post.likes.filter(id=self.request.user.id).exists():
@@ -59,24 +72,20 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
 
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Your comment have been posted successfully, it will now await approval')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your comment have been posted successfully, it will now await approval'
+                                 )
             comment.save()
         else:
             comment_form = CommentForm()
 
-        return render(
-            request,
-            "post_detail.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": True,
-                "liked": liked,
-                "comment_form": CommentForm(),
-            },
-        )
+        return render(request, 'post_detail.html', {
+            'post': post,
+            'comments': comments,
+            'commented': True,
+            'liked': liked,
+            'comment_form': CommentForm(),
+        })
 
 
 class PostLike(View):
@@ -94,10 +103,10 @@ class PostLike(View):
 @login_required
 def bookmark_add(request, id):
     post = get_object_or_404(Post, id=id)
-    if post.bookmark.filter(id=request.user.id).exists():
-        post.bookmark.remove(request.user)
+    if post.bookmarks.filter(id=request.user.id).exists():
+        post.bookmarks.remove(request.user)
     else:
-        post.bookmark.add(request.user)
+        post.bookmarks.add(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
@@ -105,7 +114,5 @@ def bookmark_add(request, id):
 def bookmark_list(request):
     user = request.user
     bookmark_posts = user.bookmark.all()
-    context = {
-        'bookmark_posts': bookmark_posts,
-    }
+    context = {'bookmark_posts': bookmark_posts}
     return render(request, 'bookmarks.html', context)
